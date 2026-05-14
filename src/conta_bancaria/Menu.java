@@ -17,6 +17,7 @@ public class Menu {
 
 	public static void main(String[] args) {
 
+		criarContasTeste();
 		
 		int opcao;
 
@@ -175,6 +176,21 @@ public class Menu {
 		contaController.listarTodas();
 		
 		
+	}
+	
+	private static void criarContasTeste() {
+
+		contaController.cadastrar(
+			new ContaCorrente(contaController.gerarNumero(), 123, 1, "João da Silva", 1000.0f, 100.0f));
+
+		contaController.cadastrar(
+			new ContaCorrente(contaController.gerarNumero(), 456, 1, "Maria dos Santos", 2000.0f, 200.0f));
+
+		contaController.cadastrar(
+			new ContaPoupanca(contaController.gerarNumero(), 789, 2, "Mariana Hernandez", 10000.0f, 12));
+
+		contaController.cadastrar(
+			new ContaPoupanca(contaController.gerarNumero(), 123, 2, "Giovanna Giunchetti", 8000.0f, 23));
 	}
 	
 }
